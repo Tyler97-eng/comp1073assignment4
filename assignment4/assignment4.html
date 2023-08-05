@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>API Integration | COMP1073 Client-Side JavaScript</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/api.js"></script>
+</head>
+
+<body>
+    <!-- top section with explanation and form/buttons -->
+    <section class="top">
+        <h1>YouTube API-Mania</h1>
+        <!-- image from: https://www.google.com/url?sa=i&url=https%3A%2F%2F1000logos.net%2Fyoutube-logo%2F&psig=AOvVaw27hzRcC8eqXg_D13QbIjPm&ust=1691121008974000&source=images&cd=vfe&opi=89978449&ved=0CA4QjRxqFwoTCJCUlurKv4ADFQAAAAAdAAAAABAJ -->
+        <img src="https://1000logos.net/wp-content/uploads/2017/05/Red-YouTube-logo.png">
+        <h2>Please Enter a Search Topic Below to Generate a YouTube Video AND Generate a New York Times Article!</h2>
+        <!-- label and input for video/article search term -->
+        <label for="search">Enter Search Term (Case-Sensitive):</label>
+        <input type="text" id="searchTerm" name="search"></input>
+        <!-- submit button calls getVideo function onclick -->
+        <button id="submit" onclick="getVideo()">Submit</button>
+        <!-- reset button calls resetVideos function onclick -->
+        <button id="reset" onclick="resetVideos()">Reset</button>
+        <!-- big picture button calls enlargeVideo function onclick -->
+        <button id="enlarge" disabled="true" onclick="enlargeVideo()">Big Picture</button>
+        <h3>Click Submit to Get a Video and Article | Click Reset to Remove All Videos | Click Big Picture to Enlarge
+            One Video</h3>
+        <p>*You can only generate five videos. If you want to generate 5 more videos, please click the reset button.</p>
+        <p>**You can only use Big Picture once 5 videos have been generated.</p>
+    </section>
+    <!-- section for large video display and NY Times articles -->
+    <section class="theatreSection">
+        <!-- blank iframe set for big picture mode of a video -->
+        <iframe id="theatre" src=""></iframe>
+        <ul id="articles">
+            <h3>New York Times Articles Found Using Your Search:</h3>
+            <!-- NY Times articles will go here -->
+        </ul>
+    </section>
+    <!-- section to store generated YouTube videos -->
+    <section id="videos" onclick="enlargeVideo()">
+        <!-- videos will be stored here in blank iframes -->
+        <iframe id="video1" src=""></iframe>
+        <iframe id="video2" src=""></iframe>
+        <iframe id="video3" src=""></iframe>
+        <iframe id="video4" src=""></iframe>
+        <iframe id="video5" src=""></iframe>
+    </section>
+</body>
+
+</html>

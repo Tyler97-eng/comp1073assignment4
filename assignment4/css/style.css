@@ -1,0 +1,72 @@
+/*****GENERAL BODY STYLING*******/
+body {
+    margin: 0px;
+    background-color: azure;
+}
+
+/* h1 styling at top */
+h1 {
+    text-align: center;
+    color: red;
+}
+
+/* YouTube logo styling to place in centre */
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 50px;
+    width: auto;
+}
+
+/* add margin to left of top section */
+.top {
+    margin-left: 2%;
+}
+
+/* make all p elements italic */
+p {
+    font-style: italic;
+}
+
+/* style section with big iframe and NY Times articles */
+.theatreSection {
+    display: flex;
+    flex-direction: row;
+    height: 450px;
+    background-color: white;
+    border: 2px solid black;
+}
+
+/* add red border to large iframe */
+#theatre {
+    width: 50%;
+    border-color: crimson;
+    background-color: black;
+}
+
+/* add wrap and scroll to articles ul */
+#articles {
+    background-color: white;
+    width: 50%;
+    flex-wrap: wrap;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+/* add underline to h3 in ul */
+#articles h3 {
+    text-decoration: underline;
+}
+
+/* flex for five stored videos at bottom of page */
+#videos {
+    display: flex;
+    flex-direction: row;
+}
+
+/* general iframe styling to add border and background colour */
+iframe {
+    border-color: black;
+    background-color: gray;
+}
